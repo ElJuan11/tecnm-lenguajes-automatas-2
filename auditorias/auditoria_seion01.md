@@ -28,8 +28,11 @@
 ### 2.2 Prompt Estructurado
 ```text
 [Contexto] Trabajas en un entorno C99 estándar utilizando GCC, sin librerías externas o no estándar.
+
 [Rol] Actúa como un ingeniero de software de sistemas y compiladores experto en gestión de memoria y punteros en C.
-[Especificación] Escribe una función modular en C llamada invertir_buffer que reciba un puntero char* y un size_t len para invertir una cadena de caracteres "in-place" (in situ). La implementación debe tener estrictamente una complejidad temporal O(n) y una complejidad espacial auxiliar O(1). Debe contemplar de manera robusta la seguridad de punteros y casos límite.
+
+[Especificación] Escribe una función modular en C llamada invertir que reciba un único puntero char *s para invertir una cadena de caracteres terminada en nulo "in-place" (in situ). La implementación debe calcular la longitud de manera segura mediante strlen, mantener estrictamente una complejidad temporal O(n) y una complejidad espacial auxiliar O(1). Debe contemplar de manera robusta la seguridad de punteros y casos límite (como punteros NULL).
+
 [Output] Proporciona únicamente el código fuente modular en C junto con un breve análisis de su complejidad temporal y espacial en comentarios, omitiendo explicaciones conversacionales adicionales.
 ```
 
