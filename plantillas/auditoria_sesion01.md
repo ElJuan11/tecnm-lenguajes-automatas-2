@@ -80,10 +80,17 @@ void invertir_buffer(char *str, size_t len) {
 
 ### Salida del harness
 ```text
-[TEST 1] Verificación de puntero NULL (str = NULL, len = 5): PASSED
-[TEST 2] Verificación de buffer vacío o longitud 1 (len = 0, len = 1): PASSED
-[TEST 3] Verificación de longitudes pares e impares ("1234" -> "4321", "abcde" -> "edcba"): PASSED
-RESULTADO: 3/3 pruebas superadas
+=== AUDITORIA SESION 01 - Inversion de buffer in-place ===
+Caso                               esperado:              obtenido:              resultado
+[ 1] invertir("HOLA")                   esperado: ALOH         obtenido: ALOH         OK
+[ 2] invertir("abc")                    esperado: cba          obtenido: cba          OK
+[ 3] invertir("")                       esperado:              obtenido:              OK
+[ 4] invertir("AB")                     esperado: BA           obtenido: BA           OK
+[ 5] invertir("a")                      esperado: a            obtenido: a            OK
+[ 6] invertir(NULL)                     esperado: sin crash    obtenido: sin crash    OK
+
+RESULTADO: 6/6 pruebas superadas
+TODO EN VERDE. Documenta tu auditoria en auditorias/auditoria_sesion01.md
 ```
 
 * [x] Caso base y límites superados sin *Crash*.
